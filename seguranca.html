@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+<h3>Seguranca</h3>
+<script>
+    function pularLinha() {
+        document.write("<br>");
+    }
+    
+    function mostrar(str) {
+        document.write(str);
+        pularLinha();
+        pularLinha();
+        pularLinha();
+        console.log("fim funcao mostrar");
+    }
+    
+    let idade = parseInt(prompt("Informe sua idade: "));
+    let senha = prompt("Senha: ");
+
+//  Entrar se maior que 18 anos OU senha for "admin"
+
+    if (idade >=18 || senha == "admin") {
+        mostrar ("Entrada liberada!");
+    }
+
+//  ! significa NOT
+
+    let maiorIdade = (idade >= 18);
+    if (!maiorIdade) {
+        mostrar ("Voce eh menor de idade!");
+    } 
+    
+</script>
