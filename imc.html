@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+<h3>Calculo do IMC</h3>
+<script>
+    function pularLinha() {
+        document.write("<br>");
+    }
+    
+    function mostrar(str) {
+        document.write(str);
+        pularLinha();
+        pularLinha();
+        console.log("fim funcao mostrar");
+    }
+
+    function calcularImc(p,a) {
+        var imc = p/(a*a);
+        mostrar ("o IMC calculado eh: "+imc.toFixed(3));
+    }
+    
+    var peso = 90;
+    var altura = 1.80;
+    calcularImc(peso,altura);
+
+    var pesoPrimo = 120;
+    var alturaPrimo = 1.90;
+    calcularImc(pesoPrimo,alturaPrimo);
+
+    // CODIGO ANTERIOR
+    //var peso = 90;
+    //var altura = 1.80;
+    //var imc = peso/(altura*altura);
+
+    //mostrar ("o imc calculado eh: "+imc.toFixed(3));
+    
+</script>

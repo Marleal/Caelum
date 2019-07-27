@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+<h3>Revisao 4</h3>
+<script>
+
+/*  document.write((8+7+5+9)/4);
+
+    a) Reescreva o codigo acima p/ comunicar o calculo da media das notas de portugues 
+       que joao tirou em 2018
+    b) apresente a media arredondada       */
+
+    function media(n1,n2,n3,n4) {
+        let result = (n1+n2+n3+n4)/4;
+        mostrar ("a media arredondada para inteiro eh: "+Math.round(result));
+        mostrar("<br>");
+        mostrar ("a media arredondada para 2 casas decimais eh: "+result.toFixed(2));
+    }
+
+    function mostrar(str) {
+        document.write(str);
+        console.log("fim funcao mostrar");
+    }
+
+    let nota1 = 8.75;
+    let nota2 = 17.444444;
+    let nota3 = 50;
+    let nota4 = 9;
+    
+    media (nota1,nota2,nota3,nota4);
+
+</script>
