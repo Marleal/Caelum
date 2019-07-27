@@ -17,10 +17,19 @@
         return p/(a**2);
     }
     
-    var nome = prompt("Informe seu nome: ")
-    var peso = prompt("Informe seu peso: ");
+    var nome   = prompt("Informe seu nome: ")
+    var peso   = prompt("Informe seu peso: ");
     var altura = prompt("Informe sua altura: ");
-    var imc=calcularImc(peso,altura);
-    mostrar ("Sr "+nome+", o seu IMC calculado eh: "+imc.toFixed(3));
+    var imc    = calcularImc(peso,altura);
+    mostrar ("Sr " + nome + ", o seu IMC calculado eh: " + imc.toFixed(3));
 
+    if (imc < 18.5) {
+        mostrar ("Seu IMC esta' abaixo do ideal");
+    }
+    if (imc > 31) {
+        mostrar ("Seu IMC esta' acima do ideal");
+    }
+    if (imc >= 18.5 && imc <= 31) {     // && => AND
+        mostrar ("Parabens, seu IMC esta' ideal!")
+    }
 </script>

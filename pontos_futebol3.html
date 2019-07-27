@@ -1,5 +1,5 @@
 <meta charset="UTF-8">
-<h3>Futebol 2</h3>
+<h3>Futebol 3</h3>
 <script>
     
     function pularLinha() {
@@ -12,37 +12,38 @@
         console.log("fim funcao mostrar");
     }
 
-    function calculaPontos(vitorias,empates,derrotas) {
-        return (vitorias * 3 ) + empates - derrotas;
+    function calculaPontos(vit,emp,der) {
+        return (vit * 3 ) + emp - der;
     }
 
     let time = prompt("Qual o seu time? ");
-    let vitorias = parseInt(prompt("Numero de vitorias: "));   
-    let empates  = parseInt(prompt("Numero de empates: "));
-    let derrotas = parseInt(prompt("Numero de derrotas: "));
+    let vitorias = parseInt(prompt("Numero de vitorias do " + time + ": "));   
+    let empates = parseInt(prompt("Numero de empates do " + time + ": "));
+    let derrotas = parseInt(prompt("Numero de derrotas do " + time + ": "));
     
     let pontos = calculaPontos (vitorias,empates,derrotas);   
     
     mostrar("O " + time + " fez " + pontos + " pontos!");
 
-    let vitoriasAdversario = parseInt(prompt("Numero de vitórias do adversário: "));
-    let empatesAdversario  = parseInt(prompt("Numero de empates do adversário: "));
-    let derrotasAdversario = parseInt(prompt("Numero de derrotas do adversário: "));
+    let timeAdversario = prompt("Qual o time adversario? ");
+    let vitoriasAdversario = parseInt(prompt("Numero de vitórias do " + timeAdversario + ": "));
+    let empatesAdversario= parseInt(prompt("Numero de empates do " + timeAdversario + ": "));
+    let derrotasAdversario = parseInt(prompt("Numero de derrotas do " + timeAdversario + ": "));
     
     let pontosAdversario = calculaPontos (vitoriasAdversario,empatesAdversario,derrotasAdversario);
 
-    mostrar("O adversário fez " + pontosAdversario + " pontos!");
+    mostrar("O " + timeAdversario + " fez " + pontosAdversario + " pontos!");
 
     if (pontos > pontosAdversario) {
-        mostrar (time + " está indo melhor que o adversário!");
+        mostrar (time + " está indo melhor que o " + timeAdversario + "!");
     }
 
     if (pontos < pontosAdversario) {
-        mostrar (time + " está indo pior que o adversário!");
+        mostrar (time + " está indo pior que o " + timeAdversario + "!");
     }
 
     if (pontos == pontosAdversario) {
-        mostrar (time + " está empatado com o adversário!");
+        mostrar (time + " está empatado com o " + timeAdversario + "!");
     }
 
 </script>
