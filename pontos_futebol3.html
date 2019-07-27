@@ -1,0 +1,48 @@
+<meta charset="UTF-8">
+<h3>Futebol 2</h3>
+<script>
+    
+    function pularLinha() {
+        document.write("<br>");
+    }
+
+    function mostrar(str) {
+        document.write(str);
+        pularLinha();
+        console.log("fim funcao mostrar");
+    }
+
+    function calculaPontos(vitorias,empates,derrotas) {
+        return (vitorias * 3 ) + empates - derrotas;
+    }
+
+    let time = prompt("Qual o seu time? ");
+    let vitorias = parseInt(prompt("Numero de vitorias: "));   
+    let empates  = parseInt(prompt("Numero de empates: "));
+    let derrotas = parseInt(prompt("Numero de derrotas: "));
+    
+    let pontos = calculaPontos (vitorias,empates,derrotas);   
+    
+    mostrar("O " + time + " fez " + pontos + " pontos!");
+
+    let vitoriasAdversario = parseInt(prompt("Numero de vitórias do adversário: "));
+    let empatesAdversario  = parseInt(prompt("Numero de empates do adversário: "));
+    let derrotasAdversario = parseInt(prompt("Numero de derrotas do adversário: "));
+    
+    let pontosAdversario = calculaPontos (vitoriasAdversario,empatesAdversario,derrotasAdversario);
+
+    mostrar("O adversário fez " + pontosAdversario + " pontos!");
+
+    if (pontos > pontosAdversario) {
+        mostrar (time + " está indo melhor que o adversário!");
+    }
+
+    if (pontos < pontosAdversario) {
+        mostrar (time + " está indo pior que o adversário!");
+    }
+
+    if (pontos == pontosAdversario) {
+        mostrar (time + " está empatado com o adversário!");
+    }
+
+</script>

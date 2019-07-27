@@ -1,0 +1,54 @@
+<meta charset="UTF-8">
+<h3>Futebol</h3>
+<script>
+    
+    function pularLinha() {
+        document.write("<br>");
+    }
+    function mostrar(str) {
+        document.write(str);
+        pularLinha();
+        console.log("fim funcao mostrar");
+    }
+    
+    let time = prompt("Qual o seu time? ");
+
+    let vitorias = prompt("Numero de vitorias: ");
+    vitorias = parseInt(vitorias);
+    
+    let empates = parseInt(prompt("Numero de empates: "));
+    
+    let pontos = (vitorias*3)+empates;   
+    
+    mostrar("O " + time + " fez " + pontos + " pontos!");
+
+    if (pontos > 28) {
+        mostrar (time + " está indo MELHOR que Livros Velhos!");
+    }
+
+    if (pontos < 28) {
+        mostrar (time + " está indo PIOR que Livros Velhos!");
+    }
+
+    if (pontos == 28) {
+        mostrar (time + " está EMPATADO com o Livros Velhos!");
+    }
+
+    let vitoriasAdversario = parseInt(prompt("Numero de vitórias do adversário: "));
+    let empatesAdversario= parseInt(prompt("Numero de empates do adversário: "));
+
+    let pontosAdversario = (vitoriasAdversario*3)+empatesAdversario;
+
+    if (pontos > pontosAdversario) {
+        mostrar (time + " está indo melhor que o adversário!");
+    }
+
+    if (pontos < pontosAdversario) {
+        mostrar (time + " está indo pior que o adversário!");
+    }
+
+    if (pontos == pontosAdversario) {
+        mostrar (time + " está indo empatado com o adversário!");
+    }
+
+</script>

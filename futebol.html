@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+<h3>Futebol</h3>
+<script>
+    
+    function pularLinha() {
+        document.write("<br>");
+    }
+    function mostrar(str) {
+        document.write(str);
+        pularLinha();
+        console.log("fim funcao mostrar");
+    }
+    
+    let time = prompt("Qual o seu time? ");
+
+    // let vitorias = prompt("Numero de vitorias: ");
+    // let empates = prompt("Numero de empates: ");
+    // let pontos = (vitorias*3)+empates*1;  // usou aqui o *1 para converter a string obtida no prompt
+                                             // Ou usar parseInt na variavel do prompt (ver abaixo) 
+    
+    // mostrar("O " + time + " fez " + pontos + " pontos!");
+
+    let vitorias = prompt("Numero de vitorias: ");
+    vitorias = parseInt(vitorias);
+    
+    let empates = prompt("Numero de empates: ");
+    empates = parseInt(empates);
+    
+    let pontos = (vitorias*3)+empates;   
+    
+    mostrar("O " + time + " fez " + pontos + " pontos!");
+
+    if (pontos >= 28) {
+        mostrar (time + " está classificado!");
+    }
+
+</script>
