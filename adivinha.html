@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+<h3>Adivinha</h3>
+<script>
+    function pularLinha() {
+        document.write("<br>");
+    }
+    
+    function mostrar(str) {
+        document.write(str);
+        pularLinha();
+        console.log("fim funcao mostrar");
+    }
+    
+    function numeroAleatorio() {
+        return Math.round(Math.random() * 10); 
+    }
+    
+    let numeroAdivinha = numeroAleatorio();
+    console.log(numeroAdivinha);
+
+    let numero = parseInt(prompt("Informe um numero de 1 a 10: "));
+
+    if (numero == numeroAdivinha) {
+        mostrar ("Parabens, voce acertou, o numero eh " + numero + "!");
+    } else {
+        mostrar ("Voce errou, o numero correto eh " + numeroAdivinha + "!");
+    }
+
+</script>
