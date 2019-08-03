@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+<h3>Tabuada</h3>
+<script>
+    function pularLinha() {
+        document.write("<br>");
+    }
+    
+    function mostrar(str) {
+        document.write(str);
+        pularLinha();
+        console.log("fim funcao mostrar");
+    }
+    
+    function mostraTabuada(num,mult) {
+        mostrar("=> " + num + " x " + mult + " = " + num * mult);
+    }
+    
+    let numero = parseInt(prompt("Informe o numero: "));
+    
+    mostrar("** Tabuada de " + numero + " **");
+    
+    let multiplicador = 1;
+    while (multiplicador <= 10) {
+        mostraTabuada(numero,multiplicador);
+//        multiplicador = multiplicador + 1; 
+        multiplicador++;
+    }
+
+    mostrar ("");
+    
+    for ( let i = 1; i <= 10; i++ ) {
+        mostraTabuada(numero,i); 
+    }
+
+
+</script>

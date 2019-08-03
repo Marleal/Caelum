@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+<h3>Revisao 9</h3>
+<script>
+    function pularLinha() {
+        document.write("<br>");
+    }
+    
+    function mostrar(str) {
+        document.write(str);
+        pularLinha();
+        console.log("fim funcao mostrar");
+    }
+    
+    let idade = parseInt(prompt("Qual sua idade? "));
+    let temCarteira = prompt("Possui carteeira (S/N)? ");
+//    let temCarteira = prompt("Possui Cartera (S/N) ");
+
+// termine o prgm indicando se o usuario pode dirigir ou nao
+
+    if (idade >= 18 && temCarteira.toUpperCase() == 'S') {
+//    if (idade >= 18 && (temCarteira == 'S' || temCarteira == 's')) {
+        mostrar ("Voce está apto a dirigir!");
+    }
+    else {
+        mostrar ("Voce nao estah apto a dirigir!");
+    }
+
+par
+</script>

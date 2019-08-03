@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<h3>Idade da Familia</h3>
+<script>
+    function pularLinha() {
+        document.write("<br>");
+    }
+    
+    function mostrar(str) {
+        document.write(str);
+        pularLinha();
+        console.log("fim funcao mostrar");
+    }
+
+    let qtdeFamiliares = parseInt(prompt("Informe quantos familiares vc tem: "));
+    mostrar("Voce tem " + qtdeFamiliares + " familiares");
+
+    let contador = 1;
+    let soma = 0;
+    while (contador <= qtdeFamiliares) {
+        let idade = parseInt(prompt("Qual a idade do familiar " + contador + "?"));
+        mostrar("Voce informou a idade " + idade);
+        soma = soma + idade;
+        contador++;
+    }
+
+    mostrar("A media de idade eh: " + Math.round(soma / qtdeFamiliares));
+
+</script>

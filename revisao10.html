@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+<h3>Revisao 10</h3>
+<script>
+    function pularLinha() {
+        document.write("<br>");
+    }
+    
+    function mostrar(str) {
+        document.write(str);
+        pularLinha();
+        console.log("fim funcao mostrar");
+    }
+    
+// pergunte a pontuacao do time do usuario e informe em que faixa
+// de classificacao ele se encontra conforme a tabela abaixo
+//   libertadores: ptos >=45
+//   sul americana: ptos >= 20 e < 45
+//   rebaixamento: ptos <20
+
+    let pontos = parseInt(prompt("Qual a pontuacao do seu time? "));
+    let classificacao = "";
+
+    if ( pontos >= 45 ) {
+        classificacao = "Libertadores";
+    }
+    else {
+        if ( pontos >= 20 && pontos < 45) {
+            classificacao = "Sul Americana";
+        }
+        else {
+            if (pontos < 20) {
+                classificacao = "Rebaixamento";
+            }
+        }
+    }
+
+    mostrar ("Seu time está na zona do(a) " + classificacao + " !");
+
+
+
+</script>

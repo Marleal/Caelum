@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+<h3>Copa 1</h3>
+<script>
+    function pularLinha() {
+        document.write("<br>");
+    }
+    
+    function mostrar(str) {
+        document.write(str);
+        pularLinha();
+        console.log("fim funcao mostrar");
+    }
+    
+    let anoCopa  = 1930;
+    let anoAtual = parseInt(prompt("Qual o ano limite?"));
+    
+    while (anoCopa <= anoAtual) {
+        mostrar("Em " + anoCopa + " teve Copa");
+        anoCopa = anoCopa + 4;
+    }
+    
+</script>

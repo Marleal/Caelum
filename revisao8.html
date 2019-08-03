@@ -1,0 +1,48 @@
+<meta charset="UTF-8">
+<h3>Revisao 8</h3>
+<script>
+    function pularLinha() {
+        document.write("<br>");
+    }
+    
+    function mostrar(str) {
+        document.write(str);
+        pularLinha();
+        console.log("fim funcao mostrar");
+    }
+    
+    function numeroAleatorio() {
+        return Math.round(Math.random() * 10); 
+    }
+    
+   let numero=10;
+
+// a)
+   if (numero >= 2 && numero < 12) {
+       alert("entrou 1");
+   }
+
+// b)
+//   if (numero >= 2 && < 12) { => da' erro expresion expected
+//       alert("entrou 2");
+//   }
+
+// c)
+   if (numero >= 10) {
+       alert("entrou 3");
+   }
+
+// d)  
+   if (numero >= 2 || numero < 0) {
+       alert("entrou 4");
+   }
+   
+// e)
+    let vaiEntrar = numero < 0;
+    if ( !vaiEntrar ) {
+        alert("entrou 5");
+    }   
+
+   // quais ifs vao exibir "entrou"?
+
+</script>

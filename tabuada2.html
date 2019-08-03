@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+<h3>Tabuada</h3>
+<script>
+    function pularLinha() {
+        document.write("<br>");
+    }
+    
+    function mostrar(str) {
+        document.write(str);
+        pularLinha();
+        console.log("fim funcao mostrar");
+    }
+    
+    function tabuada(num) {
+        while ( mult < 10) { 
+            mult = mult + 1;
+            return num * mult;
+        }    
+    }
+    
+    let numero = parseInt(prompt("Informe o numero: "));
+    var mult = 0;
+
+    mostrar("=> " + numero + " X " + mult + " = " + tabuada(numero));
+    
+    
+</script>
