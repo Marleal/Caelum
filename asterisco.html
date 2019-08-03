@@ -10,14 +10,43 @@
         console.log("fim funcao mostrar");
     }
     
-    for (let lin = 1; lin <= 3; lin++) {
-        
+    for (let lin = 1; lin <= 6; lin++) {
         for (let col = 1; col <= 6; col++) {
+            if (col <= lin) {
+                mostrar ("*"); 
+            }
+        }
+       pularLinha();
+    }
+
+    pularLinha();
+    pularLinha();
+
+    for (let lin = 1; lin <= 6; lin++) {
+        for (let col = 1; col <= lin; col++) {
             mostrar ("*");
         }
-       
        pularLinha();
-        
+    }
+
+    pularLinha();
+    pularLinha();
+
+    for (let lin = 1; lin <= 6; lin++) {
+        for (let col = lin; col <= 6; col++) {
+            mostrar ("*");
+        }
+       pularLinha();
+    }
+
+    pularLinha();
+    pularLinha();
+
+    for (let lin = 1; lin <= 6; lin++) {
+        for (let col = 6; lin <= col; col--) {
+            mostrar ("*");
+        }
+       pularLinha();
     }
 
 </script>

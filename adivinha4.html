@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+<h3>Adivinha no HTML</h3>
+
+<input id="numero">
+<button id="adivinhar">Adivinhe</button>
+
+<script>
+
+    function botaoClicado() {       // funcao anonima, nao tem parametro ()
+        if (numeroAdivinha == campoNumero.value) {
+            alert ("Acertou!")
+        }
+        campoNumero.value = "";
+        campoNumero.focus();
+    }
+
+    function numeroAleatorio() {
+        return Math.round(Math.random() * 10); 
+    }
+
+    let numeroAdivinha = numeroAleatorio();
+    console.log(numeroAdivinha);
+    
+    let campoNumero = document.getElementById("numero");
+    let botao = document.getElementById("adivinhar");
+
+    botao.onclick = botaoClicado;   // apenas referenciando a funcao 
+                                    // o onclick nao eh recomendado atualmente, melhor usar o
+                                    // addEventListener (vide no MDN)
+
+/*  botao.addEventListener("click", function() {
+        if (numeroAdivinha == campoNumero.value) {
+            alert ("Acertou!");
+        }
+    });    
+*/ 
+    //console.log(campoNumero.value); // value para pegar o valor que foi digitado
+ 
+    
+
+</script>
