@@ -1,0 +1,66 @@
+<meta charset="UTF-8">
+<h3>IMC no HTML</h3>
+
+Nome  :<input id="nome">
+<br>
+Peso  :<input id="peso">
+<br>
+Altura:<input id="altura">
+<br>
+IMC:<span id="imc"></span>
+<br>
+
+<button id="botao">
+    CalcularIMC
+</button>
+
+<ul id="pessoas">
+    <li></li>
+</ul>
+
+<script>
+
+    function calculaImc() {       // funcao anonima, nao tem parametro ()
+        let inputPeso = document.getElementById("peso");
+        let inputAlt  = document.getElementById("altura");
+        let peso      = inputPeso.value;
+        let altura    = inputAlt.value;
+        let imc       = peso/(altura*altura);
+
+        let span = document.getElementById("imc");
+        span.textContent = imc.toFixed(3);
+    }
+
+    function incluirPessoa() {
+        let inputNome = document.getElementById("nome");
+        let nome      = inputNome.value;
+
+        if (pessoas.indexOf(nome) < 0) {    // indexOf retorna a posicao do nome no array, -1 se nao existir
+            pessoas.push(nome);
+            appendPessoa(nome);    
+        }
+        console.log(pessoas);
+    }
+
+    function appendPessoa(nome) {
+        let ul = document.getElementById("pessoas");
+        let li = document.createElement("li");
+        li.textContent = nome;
+        ul.appendChild(li);
+        
+        // document.write(nome); ==> nao funciona
+    }
+
+    let pessoas = [];
+    let botao = document.getElementById("botao");
+
+    // 2 formas de fazer, sendo q a melhor eh a addEventListener
+
+    // botao.onclick = calculaIMC;
+    botao.addEventListener("click",calculaImc);
+
+    // botao.onclick = incluirPessoa;
+    botao.addEventListener("click",incluirPessoa);
+
+
+</script>
