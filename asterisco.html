@@ -7,9 +7,9 @@
     
     function mostrar(str) {
         document.write(str);
-        console.log("fim funcao mostrar");
+      //  console.log("fim funcao mostrar");
     }
-    
+/*    
     for (let lin = 1; lin <= 6; lin++) {
         for (let col = 1; col <= 6; col++) {
             if (col <= lin) {
@@ -47,6 +47,25 @@
             mostrar ("*");
         }
        pularLinha();
+    }
+
+    pularLinha();
+    pularLinha();
+*/
+
+    // link para ver o codigo => codepen.io/dpcosta/pen/jgeyaY
+    const linhas = 10;
+    const colunas = linhas * 2;
+    
+    for (let i = 1; i <= linhas; i++) {
+        for (let j = 1; j <= colunas; j++) {
+            if ((i == j) || (j == colunas - i + 1)) {
+                mostrar ("*");
+            } else {
+                mostrar ("_");
+            }
+        }    
+        pularLinha();
     }
 
 </script>
