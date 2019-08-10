@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+<canvas id="tela" height="400" width="600">
+
+</canvas>
+
+<script>
+    let tela = document.getElementById("tela");  // o querySelector eh mais moderno
+    let c    = tela.getContext("2d");
+
+    c.fillStyle = "green";                      // codepen.io/collection/XOgvYz
+    c.fillRect(0,0,200,400);                    // codepen.io/dpcosta
+
+    c.fillStyle = "red";                      // codepen.io/collection/XOgvYz
+    c.fillRect(400,0,200,400);                    // codepen.io/dpcosta
+
+    c.fillStyle="gray";
+    c.beginPath();
+    c.moveTo(300,200);
+    c.lineTo(200,400);
+    c.lineTo(400,400);
+    c.fill();
+
+    c.fillStyle="blue";
+    c.beginPath();
+    c.arc(300,200,50,0,2*3.14);
+    c.fill()
+    
+</script>
+

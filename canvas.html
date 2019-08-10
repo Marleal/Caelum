@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+<canvas height="400" width="600" 
+
+    id="tela"   class="grafico">
+
+</canvas>
+
+
+
+<script>
+    let tela = document.getElementById("tela");  // o querySelector eh mais moderno
+    let c    = tela.getContext("2d");
+
+    //c.fillStyle = "red";                      // codepen.io/collection/XOgvYz
+    //c.fillRect(0,0,200,400);                    // codepen.io/dpcosta
+
+    //c.fillStyle = "black";                      // codepen.io/collection/XOgvYz
+    //c.fillRect(200,0,200,400);                    // codepen.io/dpcosta
+
+    c.fillStyle="gray";
+    c.beginPath();
+    c.moveTo(300,200);
+    c.lineTo(200,400);
+    c.lineTo(400.400);
+    c.fill();
+
+    querySelector("#tela");         // substitui o getElementById
+    querySelector("canvas");        // substitui o getElementByTagName
+    querySelector(".grafico");      // substitui o getElementByClassName
+
+</script>
+

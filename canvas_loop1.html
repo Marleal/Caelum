@@ -1,0 +1,76 @@
+<meta charset="UTF-8">
+
+<canvas id="tela" height="600" width="600">
+</canvas>
+<br>
+<button id="botao">
+    Limpar Tela
+</button>
+
+<script>
+
+    function limparTela() {
+        ctx2d.clearRect(0,0,tela.width,tela.height);
+    }
+
+    function circuloA(x,y,raio,arc_ini,arc_fim,sentido,cor) {
+        ctx2d.fillStyle=cor;
+        ctx2d.beginPath();
+        ctx2d.arc(x,y,raio,arc_ini,arc_fim,sentido);
+        ctx2d.fill();
+    }
+
+    function circulo(x,y,raio,cor) {
+        ctx2d.fillStyle=cor;
+        ctx2d.beginPath();
+        ctx2d.arc(x,y,raio,0,2*Math.PI);
+        ctx2d.fill();
+    }
+
+    function canvasClicado(eventInfo) {   // infos do evento
+        const x = eventInfo.pageX;
+        const y = eventInfo.pageY;
+        circulo (x,y,10,"blue");
+    }
+
+    const tela  = document.querySelector("#tela");
+    const ctx2d = tela.getContext("2d");
+    const botao = document.querySelector("button");
+
+    tela.addEventListener("click",canvasClicado);
+
+    botao.addEventListener("click",limparTela);
+
+
+    function moveCirculo() {
+        limparTela();
+        circulo (x,y,20,"green");
+        x++;
+    }
+  
+    let x = 0;
+    let y = 100;
+    
+    setInterval(moveCirculo,10);
+    
+/*
+    let x = 100;
+    let y = 100;
+    let raio = 50;
+    let arcInicio = 180;
+    let arcFinal  = 9*3.14;
+    let sentidoHorario = true;
+    let cor = "blue";
+
+    //circuloA(x,y,raio,arcInicio,arcFinal,sentidoHorario,cor);
+
+//    while (x < 600) {
+//        desenhaQuadradro(x,0,"green");
+   //     desenhaQuadradro(x,50,"red");
+ //       circulo(x,y,raio,anguloInicio,anguloFinal,sentidoHorario,cor);
+ //       x = x + 50;
+  //  }
+    */
+
+</script>
+
